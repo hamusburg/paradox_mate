@@ -115,7 +115,7 @@ namespace paradox_mate
             foreach (var f in files)
             {
                 YmlFile yml = new YmlFile();
-                yml.Read(f);
+                yml.ReadOrigin(f);
                 var fn = Path.GetFileName(f);
 
                 var f3 = path3 + fn;
@@ -127,12 +127,12 @@ namespace paradox_mate
                 var f1 = path1 + fn;
                 if (File.Exists(f1))
                 {
-                    yml.Read(f1);
+                    yml.ReadNew(f1);
                 }
                 var f2 = path2 + fn;
                 if (File.Exists(f2))
                 {
-                    yml.Read(f2);
+                    yml.ReadNew(f2);
                 }
                 yml.Write(f);
             }
