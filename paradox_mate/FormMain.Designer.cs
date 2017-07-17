@@ -33,10 +33,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBoxPath = new System.Windows.Forms.TextBox();
-            this.buttonSelectPath = new System.Windows.Forms.Button();
             this.buttonPath1 = new System.Windows.Forms.Button();
+            this.buttonSelectPath = new System.Windows.Forms.Button();
+            this.textBoxPath = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControlMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,6 +77,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.buttonPath1);
             this.tabPage2.Controls.Add(this.buttonSelectPath);
             this.tabPage2.Controls.Add(this.textBoxPath);
@@ -87,22 +89,15 @@
             this.tabPage2.Text = "批量操作目录";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // buttonPath1
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1152, 611);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "操作单个文件";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // textBoxPath
-            // 
-            this.textBoxPath.Location = new System.Drawing.Point(73, 45);
-            this.textBoxPath.Name = "textBoxPath";
-            this.textBoxPath.Size = new System.Drawing.Size(861, 21);
-            this.textBoxPath.TabIndex = 0;
+            this.buttonPath1.Location = new System.Drawing.Point(73, 96);
+            this.buttonPath1.Name = "buttonPath1";
+            this.buttonPath1.Size = new System.Drawing.Size(139, 23);
+            this.buttonPath1.TabIndex = 2;
+            this.buttonPath1.Text = "提取字符表";
+            this.buttonPath1.UseVisualStyleBackColor = true;
+            this.buttonPath1.Click += new System.EventHandler(this.buttonPath1_Click);
             // 
             // buttonSelectPath
             // 
@@ -114,15 +109,32 @@
             this.buttonSelectPath.UseVisualStyleBackColor = true;
             this.buttonSelectPath.Click += new System.EventHandler(this.buttonSelectPath_Click);
             // 
-            // buttonPath1
+            // textBoxPath
             // 
-            this.buttonPath1.Location = new System.Drawing.Point(73, 96);
-            this.buttonPath1.Name = "buttonPath1";
-            this.buttonPath1.Size = new System.Drawing.Size(139, 23);
-            this.buttonPath1.TabIndex = 2;
-            this.buttonPath1.Text = "提取字符表";
-            this.buttonPath1.UseVisualStyleBackColor = true;
-            this.buttonPath1.Click += new System.EventHandler(this.buttonPath1_Click);
+            this.textBoxPath.Location = new System.Drawing.Point(73, 45);
+            this.textBoxPath.Name = "textBoxPath";
+            this.textBoxPath.Size = new System.Drawing.Size(861, 21);
+            this.textBoxPath.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1152, 611);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "操作单个文件";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(399, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(286, 129);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormMain
             // 
@@ -156,6 +168,7 @@
         private System.Windows.Forms.Button buttonSelectPath;
         private System.Windows.Forms.TextBox textBoxPath;
         private System.Windows.Forms.Button buttonPath1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

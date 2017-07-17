@@ -1,4 +1,5 @@
 ﻿using paradox_mate.Utils;
+using paradox_mate.Yml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -102,6 +103,39 @@ namespace paradox_mate
             }
             
                 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var path0 = @"C:\QQDownload\origin\";
+            var path1 = @"C:\QQDownload\z_1_22_1_0_stage1.yml\";
+            var path2 = @"C:\QQDownload\z_1_22_1_0_stage2.yml\";
+            var path3 = @"C:\QQDownload\test000\";
+            var files = PathUtil.ListFile(path0).Where(x => x.EndsWith("english.yml"));
+            foreach (var f in files)
+            {
+                YmlFile yml = new YmlFile();
+                yml.Read(f);
+                var fn = Path.GetFileName(f);
+
+                var f3 = path3 + fn;
+                if (File.Exists(f3))
+                {
+                    yml.ReadOld(f3);
+                }
+
+                var f1 = path1 + fn;
+                if (File.Exists(f1))
+                {
+                    yml.Read(f1);
+                }
+                var f2 = path2 + fn;
+                if (File.Exists(f2))
+                {
+                    yml.Read(f2);
+                }
+                yml.Write(f);
+            }
         }
     }
 }
